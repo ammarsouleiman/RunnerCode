@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>runnercode</title>
+<style>
+
+     /* Floating tech elements */
+     .tech-element {
+            position: absolute;
+            opacity: 0.05;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .tech1 {
+            top: -15%;
+            left: 1%;
+            width: 500px;
+            animation-duration: 5s;
+        }
+
+        .tech2 {
+            bottom: 30%;
+            right: 1%;
+            width: 500px;
+            animation-duration: 5s;
+        }
+
+        
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+
+
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* تحريك الشعار */
+        .logo-container {
+            text-align: center;
+            margin-top: 50px;
+            animation: floatLogo 5s infinite ease-in-out;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        @keyframes floatLogo {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* النص الترحيبي */
+        .welcome-text {
+            font-size: 3rem;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 3s ease-in-out 1s infinite alternate;
+            letter-spacing: 5px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* تأثيرات البرمجة */
+        .code-animations {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .code-line {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            font-size: 1.5rem;
+            animation: moveCode 5s linear infinite;
+        }
+
+        @keyframes moveCode {
+            0% {
+                transform: translateY(100vh);
+            }
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+
+        /* تحسين لتصميم الجداول وتناسق الصفحة */
+        table {
+            width: 70%;
+            margin: 20px auto;
+            border-spacing: 10px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* تصميم متوافق مع الجوال */
+        @media (max-width: 768px) {
+            .welcome-text {
+                font-size: 2rem;
+            }
+            table {
+                width: 100%;
+                font-size: 0.9rem;
+            }
+            .logo {
+                width: 150px;
+            }
+        }
+
+
+/* تنسيق الحاوية للأزرار لتظهر في الأسفل */
+.social-icons {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    z-index: 1000;
+}
+
+/* تصميم الأزرار */
+.icon-btn {
+    width: 50px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: bounce 2s infinite ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* الألوان المختلفة لكل زر */
+.whatsapp-btn {
+    background-color: #25D366;
+}
+
+.email-btn {
+    background-color: #0072c6;
+}
+
+.youtube-btn {
+    background-color: #FF0000;
+}
+
+.tiktok-btn {
+    background-color: #000000;
+}
+
+/* حركة النبض للأزرار */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* تأثير عند تمرير الماوس */
+.icon-btn:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+</style>
+<!-- استخدم النسخة الحديثة من Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+  <div class="welcome-text">Welcome to Runner Code Academy</div>
+
+    
+
+
+
+
+
+
+<table width="400" border="30" align="center">
+  <tr>
+    <td height="318" colspan="3" align="center"><img src="images/logo.jpeg" width="500" height="258" /></td>
+  </tr>
+  <tr>
+    <td width="304" align="center"><a href="IT services/index1.html"><img src="images/runner1.png" width="200" height="103" /></a></td>
+    <td width="304" align="center"><a href="Education/index2.html"><img src="images/runner2.png" width="200" height="103" /></a></td>
+    <td width="304" align="center"><a href="Games/Games.html"><img src="images/runner4.png" width="200" height="103" /></a></td>
+  </tr>
+  <tr>
+    <td align="center"><strong><span style="font-family:Arial, Helvetica, sans-serif; color:#666; font-size:12px"><a href="IT services/index1.html" style="color:#666">IT Support Division</a></span></strong></td>
+    <td align="center"><strong><span style="font-family:Arial, Helvetica, sans-serif; color:#666; font-size:12px"><a href="Education/index2.html"  style="color:#666">learning programming languages</a></span></strong></td>
+    <td align="center"><strong><span style="font-family:Arial, Helvetica, sans-serif; color:#666; font-size:12px"><a href="Games/Games.html"  style="color:#666">Games development</a></span></strong></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-size:12px">IT support division is a website dedicated to a group of services that we provide, such as high-quality desktop app systems and websites.</td>
+    <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-size:12px">Department of learning programming languages ​​is a website dedicated to a group of services we provide for teaching programming online.</td>
+    <td align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-size:12px">Download and try all the games developed by Runner Code Academy</td>
+  </tr>
+</table>
+
+<!-- أزرار وسائل التواصل في الأسفل -->
+<div class="social-icons">
+  <!-- زر واتساب -->
+  <a href="https://wa.me/96179161153" target="_blank" class="icon-btn whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- زر البريد الإلكتروني -->
+  <a href="mailto:runnercode1@gmail.com" target="_blank" class="icon-btn email-btn">
+    <i class="fa fa-envelope"></i>
+  </a>
+
+  <!-- زر يوتيوب -->
+  <a href="https://www.youtube.com/@Runner_code" target="_blank" class="icon-btn youtube-btn">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <!-- زر تيك توك -->
+  <a href="https://www.tiktok.com/@runner_codee?is_from_webapp=1&sender_device=pc" target="_blank" class="icon-btn tiktok-btn">
+    <i class="fab fa-tiktok"></i> <!-- الأيقونة الصحيحة لتيك توك -->
+  </a>
+</div>
+
+<div class="tech-element tech1">
+    <img src="c1.png" alt="Tech Element 1">
+</div>
+<div class="tech-element tech2">
+    <img src="c2.png" alt="Tech Element 2">
+</div>
+
+</body>
+</html>
